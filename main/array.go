@@ -22,10 +22,31 @@ func main() {
 	fmt.Println(slice)
 	fmt.Println(primes)
 
-	// nil slice
-	var s []int
-	fmt.Println(s, len(s), cap(s))
-	if s == nil {
-		fmt.Println("nil!")
-	}
+	// Slice append
+	// https://www.zhihu.com/question/27161493
+	s := []int{5}
+	printSlice(s)
+	s = append(s, 7)
+	printSlice(s)
+	s = append(s, 9)
+	printSlice(s)
+	x := append(s, 11)
+	printSlice(x)
+	y := append(s, 12)
+	printSlice(y)
+	fmt.Println(s, x, y)
+
+	fmt.Println("Another...")
+
+	s = []int{5, 7, 9}
+	printSlice(s)
+	x = append(s, 11)
+	printSlice(x)
+	y = append(s, 12)
+	printSlice(y)
+	fmt.Println(s, x, y)
+}
+
+func printSlice(s []int) {
+	fmt.Printf("len=%d cap=%d %v\n", len(s), cap(s), s)
 }
