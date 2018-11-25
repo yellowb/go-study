@@ -1,2 +1,2 @@
 # go-study
-A repository for Golang study.
+A repository for Golang study
