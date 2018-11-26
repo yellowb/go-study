@@ -5,7 +5,7 @@ import "fmt"
 func main() {
 	// Full define
 	var words [2]string
-	words[0] = "abcd"
+	words[0] = "abc"
 	words[1] = "def"
 
 	fmt.Println(words[0], words[1])
