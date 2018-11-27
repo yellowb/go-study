@@ -1,3 +1,4 @@
+// Print out program args
 package main
 
 import (
