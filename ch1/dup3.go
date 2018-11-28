@@ -13,7 +13,7 @@ func main() {
 	// Read file
 	data, err := ioutil.ReadFile(fileName)
 	if err != nil {
-		_, _ = fmt.Fprintln(os.Stderr, "dup3 error: %s", err)
+		_, _ = fmt.Fprintf(os.Stderr, "dup3 error: %s\n", err)
 	}
 	for _, line := range strings.Split(string(data), "\n") {
 		counts[line]++
