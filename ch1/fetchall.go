@@ -9,7 +9,7 @@ import (
 )
 
 func main() {
-	urls := []string{"http://www.baidu.com", "http://www.163.com", "http://www.zhihu.com"}
+	urls := []string{"http://www.zhihu.com", "http://www.baidu.com", "http://www.163.com"}
 	start := time.Now()
 
 	ch := make(chan string)
