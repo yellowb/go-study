@@ -15,6 +15,7 @@ func main() {
 		os.Exit(1)
 	}
 	content, err := ioutil.ReadAll(resp.Body)
+	resp.Body.Close()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "fetch body error: %v\n", err)
 		os.Exit(1)
