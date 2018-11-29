@@ -8,7 +8,7 @@ import (
 )
 
 func main() {
-	url := "http://localhost:8888/hellow"
+	url := "http://baidu.com"
 	resp, err := http.Get(url)
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "fetch error: %v\n", err)
