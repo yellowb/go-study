@@ -24,12 +24,14 @@ func main() {
 	fmt.Println(tom)
 
 	// Another people
-	var mary People
-	mary.Name = "Mary"
-	mary.Age = 19
-	mary.Friend = tomPtr
+	var mary = People{Name: "Mary", Age: 19, Friend: tomPtr}
 	mary.Friend.Age++ // can access
 
 	fmt.Println(mary)
 	fmt.Println(tom)
+
+	var ken = People{Name: "Mary", Age: 19, Friend: tomPtr} // Type is People
+	ken2 := new(People)                                     // Type is *People
+	fmt.Printf("%T \n", ken)
+	fmt.Printf("%T \n", ken2)
 }
