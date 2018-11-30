@@ -8,6 +8,8 @@ type People struct {
 	Friend *People
 }
 
+type Point struct{ X, Y int }
+
 func main() {
 	var tom People
 	tom.Name = "Tom"
@@ -34,4 +36,11 @@ func main() {
 	ken2 := new(People)                                     // Type is *People
 	fmt.Printf("%T \n", ken)
 	fmt.Printf("%T \n", ken2)
+
+	////////////////////////////
+
+	p := Point{1, 2}
+	q := Point{1, 2}
+	fmt.Println(p.X == q.X && p.Y == q.Y) // "true"
+	fmt.Println(p == q)                   // true
 }
