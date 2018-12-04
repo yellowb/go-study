@@ -34,6 +34,7 @@ func buildTree() *TreeNode {
 	n3.left = n6
 	n3.right = n7
 
+	// n1 is root
 	return n1
 }
 
