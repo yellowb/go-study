@@ -21,11 +21,11 @@ func main() {
 			continue
 		}
 		fmt.Printf("[Server]accepted connection - %v\n", conn)
-		handleConn(conn)
+		go handleConnUsingGoroutine(conn)
 	}
 }
 
-func handleConn(c net.Conn) {
+func handleConnUsingGoroutine(c net.Conn) {
 	defer c.Close()
 	for {
 		_, err := io.WriteString(c, time.Now().Format("15:04:05\n"))
