@@ -9,7 +9,7 @@ func main() {
 	ch := make(chan int)
 	log.Printf("[Parent] started to invoke goroutine\n")
 	go childFunc(1, 2, ch)
-	go childFunc(2, 3, ch)
+	go childFunc(2, 4, ch)
 	log.Printf("[Parent] waiting for goroutine data...\n")
 	result := <-ch
 	log.Printf("[Parent] got result from goroutine with result = %d\n", result)
